@@ -13,12 +13,12 @@ fn setup(
     mut meshes: ResMut<Assets<Mesh>>,
     mut materials: ResMut<Assets<ColorMaterial>>,
 ) {
-    let shape = meshes.add(Rectangle::new(50.0, 50.0));
+    let shape = meshes.add(Rectangle::new(50., 50.));
     let color = Color::srgb(255., 0., 0.);
 
     commands.spawn((
         Mesh2d(shape),
         MeshMaterial2d(materials.add(color)),
-        Transform::from_xyz(0.0, 0.0, 0.0),
+        Transform::from_xyz(0., 0., 0.),
     ));
 }
